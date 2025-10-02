@@ -1,4 +1,7 @@
-# ![GameHaven Logo](img/Logo.png)
+
+<p align="center">
+  <img src="img/Logo.png" alt="GameHaven Logo" width="200"/>
+</p>
 
 # **GAMEHAVEN**
 
