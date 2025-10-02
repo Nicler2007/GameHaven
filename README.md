@@ -1,3 +1,7 @@
+# ![GameHaven Logo](img./logo.png)
+
+# **GAMEHAVEN**
+
 # 🎮 Game Library
 
 Game Library is an application that allows users to manage their personal game collection, write reviews, share tips, and showcase their own projects. The goal is to create a community-driven platform where players can track the games they play, discover new recommendations, and learn from each other.
