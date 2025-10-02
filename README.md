@@ -59,4 +59,4 @@ The main goal is to develop an app that connects players, makes game management 
 
 ## 📌 Authors
 
-- Add authors' names here
+- Nico Hede, Jani Piirainen
