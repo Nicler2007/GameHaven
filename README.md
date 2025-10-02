@@ -1,4 +1,4 @@
-# ![GameHaven Logo](img./Logo.png)
+# ![GameHaven Logo](img/Logo.png)
 
 # **GAMEHAVEN**
 
