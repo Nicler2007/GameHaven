@@ -1,0 +1,140 @@
+/* Värit ja fontit */
+:root {
+    --bg-dark: #0d0d0f;
+    --bg-card: #1b1b1f;
+    --accent: #5865f2; /* sininen gaming-väri */
+    --text-light: #f2f2f2;
+    --text-muted: #a1a1a1;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* NAVIGAATIO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* HERO-ALUE */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #222 0%, #111 100%);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.cta-btn {
+    background: var(--accent);
+    border: none;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* KORTTIRUUDUKKO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 50px;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    margin-top: 50px;
+}
