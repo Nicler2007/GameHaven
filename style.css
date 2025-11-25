@@ -49,6 +49,24 @@ body {
 }
 .btn-accent:hover, .btn-accent:focus { background-color: #4652d9; border-color: #4652d9; }
 
+
+/*Yhtenäinen painike "avaa"-etusivulla*/
+.btn-open {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: 0.15s ease-in-out;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.btn-open:hover,
+.btn-open:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
 /* Form elements dark */
 .form-control, .form-select, textarea.form-control {
   background-color: #0c0d0f;
