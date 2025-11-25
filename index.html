@@ -1,10 +1,184 @@
-<html lang="en">
+<!doctype html>
+<html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHaven</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pelikirjasto — Etusivu</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="/img/Logo.png" alt="Pelikirjasto logo" class="logo-img me-2">
+        <span class="fw-bold">Pelikirjasto</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="pelikirjasto.html">Pelikirjasto</a></li>
+          <li class="nav-item"><a class="nav-link" href="peliseuranta.html">Peliseuranta</a></li>
+          <li class="nav-item"><a class="nav-link" href="arvostelut.html">Arvostelut</a></li>
+          <li class="nav-item"><a class="nav-link" href="vinkit.html">Vinkit</a></li>
+          <li class="nav-item"><a class="nav-link" href="projektit.html">Projektit</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="py-5 text-center">
+    <div class="container">
+      <h1 class="display-5">Tervetuloa Pelikirjastoon</h1>
+      <p class="lead text-muted-custom">Hallinnoi pelejäsi, kirjoita arvosteluja ja jaa vinkkejä.</p>
+      <div class="d-flex justify-content-center gap-2">
+        <a href="pelikirjasto.html" class="btn btn-accent btn-lg">Aloita</a>
+        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#addGameModal">Lisää peli</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN GRID -->
+  <main class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+      <!-- Pelikirjasto -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pelikirjasto</h5>
+            <p class="card-text text-muted-custom">Lisää pelejä, merkitse statukset ja tallenna muistiinpanoja.</p>
+            <a href="pelikirjasto.html" class="btn btn-open">Avaa</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peliseuranta -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Peliseuranta</h5>
+            <p class="card-text text-muted-custom">Seuraa pelaamiasi pelejä ja suodata alustan tai tyypin mukaan.</p>
+            <a href="peliseuranta.html" class="btn btn-open">Avaa</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peliarvostelut -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Peliarvostelut</h5>
+            <p class="card-text text-muted-custom">Lisää ja lue arvosteluja, katso top-listoja.</p>
+            <a href="arvostelut.html" class="btn btn-open">Avaa</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vinkit -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Vinkit</h5>
+            <p class="card-text text-muted-custom">Tallenna ja jaa vinkkejä muille käyttäjille.</p>
+            <a href="vinkit.html" class="btn btn-open">Avaa</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projektit -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Projektit</h5>
+            <p class="card-text text-muted-custom">Jaa omia pelejä tai projekteja ja pyydä palautetta.</p>
+            <a href="projektit.html" class="btn btn-open">Avaa</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer mt-auto">
+    <div class="container text-center">
+      <small>Pelikirjasto © 2025</small>
+    </div>
+  </footer>
+
+  <!-- MODAL (lisää peli) -->
+  <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="addGameModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addGameModalLabel">Lisää uusi peli</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addGameFormIndex">
+            <div class="mb-3">
+              <label class="form-label">Pelin nimi</label>
+              <input type="text" class="form-control" id="gameNameIndex" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Status</label>
+              <select class="form-select" id="gameStatusIndex">
+                <option>Haluan pelata</option>
+                <option>Kesken</option>
+                <option>Pelattu</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Alusta</label>
+              <input type="text" class="form-control" id="gamePlatformIndex" placeholder="esim. PC, PS5">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Muistiinpanot</label>
+              <textarea class="form-control" id="gameNotesIndex" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Peruuta</button>
+          <button type="button" class="btn btn-accent" id="saveGameIndexBtn">Tallenna peli</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tallennus demo -->
+  <script>
+    document.getElementById('saveGameIndexBtn').addEventListener('click', function() {
+      const name = document.getElementById('gameNameIndex').value.trim();
+      if(!name) return alert('Anna pelin nimi');
+      const status = document.getElementById('gameStatusIndex').value;
+      const platform = document.getElementById('gamePlatformIndex').value;
+      const notes = document.getElementById('gameNotesIndex').value;
+      const games = JSON.parse(localStorage.getItem('pelikirjasto_games') || '[]');
+      games.push({ id: Date.now(), name, status, platform, notes });
+      localStorage.setItem('pelikirjasto_games', JSON.stringify(games));
+      alert('Peli tallennettu.');
+
+      var modal = bootstrap.Modal.getInstance(document.getElementById('addGameModal'));
+      if(modal) modal.hide();
+    });
+  </script>
+
 </body>
 </html>

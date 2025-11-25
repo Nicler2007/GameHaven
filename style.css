@@ -1,0 +1,94 @@
+/* custom.css - ladataan AFTER Bootstrap */
+:root {
+  --accent: #5865f2;
+  --bg-page: #0b0c0d;
+  --bg-panel: #0f1113;
+  --text-light: #e9eef8;
+  --muted: rgba(255,255,255,0.5);
+}
+
+/* Base */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-light);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* NAVBAR */
+.navbar-custom {
+  background-color: rgba(8,8,9,0.6);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+/* Logo: ympyrä ja varjo */
+.logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6), 0 0 10px rgba(88,101,242,0.08);
+  border: 2px solid rgba(255,255,255,0.03);
+}
+
+/* Cards & panels */
+.card, .modal-content {
+  background-color: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-light);
+}
+
+/* Text helpers */
+.text-muted-custom { color: var(--muted) !important; }
+
+/* Buttons */
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.btn-accent:hover, .btn-accent:focus { background-color: #4652d9; border-color: #4652d9; }
+
+
+/*Yhtenäinen painike "avaa"-etusivulla*/
+.btn-open {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: 0.15s ease-in-out;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.btn-open:hover,
+.btn-open:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* Form elements dark */
+.form-control, .form-select, textarea.form-control {
+  background-color: #0c0d0f;
+  color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Placeholder box */
+.placeholder-box {
+  background: rgba(255,255,255,0.02);
+  padding: 18px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Footer */
+.footer {
+  padding: 26px 0;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Small responsive tweak */
+@media (max-width: 780px) {
+  .navbar .navbar-brand span { display: none; } /* Piilota teksti mobiilissa */
+}
